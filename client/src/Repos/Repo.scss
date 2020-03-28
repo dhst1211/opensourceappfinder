@@ -1,0 +1,89 @@
+@import '../Style/variables.scss';
+
+.repo {
+  margin-bottom: 10px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .repo-content {
+    padding: 20px 40px 20px 40px;
+    display: flex;
+
+    @media (max-width: $mdbreakpoint) {
+      flex-direction: column;
+    }
+
+    .left-area {
+      flex: 3;
+
+      @media (min-width: $mdbreakpoint) {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .repo-name {
+        margin-bottom: 30px;
+      }
+  
+      .repo-description {
+        overflow: hidden;
+        min-height: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+      }
+
+      .repo-stats-area {
+        display: flex;
+        justify-content: flex-start;
+        
+        @media (max-width: $mdbreakpoint) {
+          justify-content: space-around;
+        }
+
+        .repo-stats-item {
+          margin-right: 20px;
+        }
+      
+        .repo-stats-item-key {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      
+        .repo-stats-item-value {
+          margin-top: 5px;
+          text-align: center;
+        }
+      }
+    }
+
+    .right-area {
+      flex: 1;
+
+      @media (min-width: $mdbreakpoint) {
+        margin-left: 30px;
+      }
+
+      .repo-attribute-list {
+        padding-top: 0px;
+    
+        .repo-attribute {
+          padding-bottom: 0px !important;
+          white-space: nowrap;
+        
+          .repo-attribute-title {
+            font-style: italic;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.repo-footer {
+  text-align: right;
+  margin-top: 10px;
+  min-height: 30px;
+}

@@ -1,0 +1,30 @@
+<% include partials/header.ejs %>
+<div>
+  <% if (projects.length > 0) {%>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>author</th>
+          <th>name</th>
+          <th>url</th>
+          <th>description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% projects.forEach((project, index) => { %>
+          <tr>
+            <td><%= project.id %></td>
+            <td><%= project.author %></td>
+            <td><%= project.name %></td>
+            <td><%= project.url %></td>
+            <td><%= project.description %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+      <p>No projects found.</p>
+  <% } %>
+</div>
+<% include partials/footer.ejs %>

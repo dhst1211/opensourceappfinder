@@ -1,0 +1,30 @@
+@import '../Style/variables.scss';
+
+.sidebar {
+  flex: 0 0 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #031a54;
+
+  @media (max-width: $mdbreakpoint) {
+    display: none;
+  }
+
+  @media (min-width: $mdbreakpoint) {
+    margin-right: 15px;
+  }
+}
+
+.sidebar-show {
+  @media (max-width: $mdbreakpoint) {
+    display: block;
+    position: fixed;
+    z-index: 1200;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: scroll !important;
+    background-color: $background-color;
+  }
+}

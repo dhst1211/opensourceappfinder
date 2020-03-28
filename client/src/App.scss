@@ -1,0 +1,45 @@
+@import-normalize;
+@import './Style/variables.scss';
+
+.App {
+  display: flex;
+}
+
+.app-main {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  @media (min-width: $mdbreakpoint) {
+    margin-top: 130px;
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+}
+
+.filter-button {
+  position: fixed !important;
+  bottom: 65px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+
+  @media (min-width: $mdbreakpoint) {
+    display: none !important;
+  }
+}
+
+.filter-apply {
+  position: fixed !important;
+  bottom: 65px;
+  right: 50px;
+  z-index: 1300;
+
+  @media (min-width: $mdbreakpoint) {
+    display: none !important;
+  }
+}
+
+.filter-apply-invisible {
+  display: none !important;
+}
