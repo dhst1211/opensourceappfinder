@@ -51,7 +51,7 @@ export default class Repo extends Component {
                 {repo.author} /
               </Typography>
               <Typography variant="h5" component="h2" className="repo-name" color="primary" gutterBottom>
-                <a href={repo.url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
+                {repo.name}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" className="repo-description">
                 {repo.description}
